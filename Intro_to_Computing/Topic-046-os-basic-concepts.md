@@ -1,4 +1,4 @@
-# CS101 Topic 046: Operating System Basic Concepts
+# Topic 046: Operating System Basic Concepts
 
 ## 1. Introduction to Operating System Paradigms
 
