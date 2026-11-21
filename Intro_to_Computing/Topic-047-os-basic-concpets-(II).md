@@ -1,5 +1,4 @@
-# CS101 — Topic 047: OS Basic Concepts (II)
-**Instructor:** Dr. M. Tanvir Afzal | **Course:** Introduction to Computing (Virtual University)
+# Topic 047: OS Basic Concepts (II)
 
 ---
 
