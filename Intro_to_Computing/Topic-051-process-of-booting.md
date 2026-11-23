@@ -1,6 +1,7 @@
 # Topic 051: Process of Booting (Getting It Started)
 
 ---
+> One Line Takeaway : Because main memory (RAM) is volatile and loses its contents when powered off, booting relies on a permanent boot loader stored in non-volatile ROM to copy the Operating System from mass storage into RAM and hand over CPU control upon startup.
 
 ## 1. The Core Problem: Volatile RAM & The Startup Paradox
 * **Main Memory (RAM) is Volatile:** Whenever a computer is turned off, all contents inside main memory (RAM)—including the Operating System—are completely erased.
@@ -30,4 +31,15 @@ To solve the empty-RAM problem, computers reserve a small portion of main memory
 ---
 
 ## 4. Step-by-Step Summary of the Booting Sequence
-1. **Power On:** Electricity
+1. **Power On:** Electricity reaches the CPU; volatile RAM is empty.
+2. **CPU Reads ROM:** The CPU's Program Counter points to the starting address of non-volatile **ROM** containing the **Boot Loader**.
+3. **OS Transfer:** Following the boot loader's instructions, the CPU copies the Operating System from **mass storage** into **main memory (RAM)**.
+4. **Control Handover:** The boot loader jumps to the OS entry point in RAM, and the Operating System takes over control of the machine.
+
+---
+
+## Quick Exam Revision Checklist
+* **Why is Booting Needed?** Because **RAM is volatile** (loses its contents on power-off) while the OS is stored on **mass storage**.
+* **Where is the Boot Loader Stored?** In **non-volatile memory (ROM / firmware)** so it is immediately available upon power-on.
+* **What Does the Boot Loader Do?** Copies the OS from mass storage into volatile main memory (RAM) and transfers CPU execution control to it.
+* **Firmware Definition:** Permanent software embedded in non-volatile memory (ROM) of a hardware device.
