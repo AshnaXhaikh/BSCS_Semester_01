@@ -38,3 +38,15 @@ A process does not always use its entire allotted time slice:
 * **Process Table:** Maintained by the **Scheduler** in main memory; tracks each process's **memory area**, **priority**, and **state (Ready vs. Waiting)**.
 * **Ready vs. Waiting:** **Ready** = able to execute immediately; **Waiting** = paused until an external event (like I/O) completes.
 * **Time Slice & Interrupt:** A **time slice** is a short CPU interval (~50 ms); when it ends, the timer triggers an **interrupt** so the **Dispatcher** can perform a **context switch** (saving registers & Program Counter).
+
+### 4. Summary Table for Topic 53
+
+| Component / Term | Core Function & Responsibility |
+| :--- | :--- |
+| **Scheduler** | Adds/removes processes and maintains the master Process Table in RAM. |
+| **Process Table** | Master memory block storing Process ID, priority, memory bounds, and status (**Ready** vs. **Waiting**). |
+| **Dispatcher** | Allocates CPU time slices to processes and oversees context switching. |
+| **Time Slice** | Tiny slice of CPU execution time (milliseconds/microseconds). |
+| **Timer Circuit & Interrupt** | Triggers a hardware interrupt signal when a process's time slice expires. |
+| **Interrupt Handler** | Kernel code that preempts the current process and transfers control back to the dispatcher. |
+| **Context Switch** | Saving the state of an interrupted process and restoring the state of the next ready process. |
